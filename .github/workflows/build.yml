@@ -53,6 +53,9 @@ jobs:
       run: |
         rm -rf ~/.buildozer
 
+    - name: Delete broken python-for-android
+      run: rm -rf ~/.buildozer/android/platform/python-for-android
+
     - name: Build APK
       run: |
         buildozer android debug
