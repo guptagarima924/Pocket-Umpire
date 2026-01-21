@@ -7,7 +7,7 @@ title = Pocket Umpire
 package.name = pocketumpire
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.pocket
+package.domain = org.pocketumpire
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -37,7 +37,8 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy
+requirements = python3,kivy,pyjnius
+android.skip_update = True
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
