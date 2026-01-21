@@ -22,11 +22,12 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: Install dependencies
+    - name: Install Buildozer (fixed)
       run: |
-        sudo apt update
-        pip install buildozer cython
-
+        pip uninstall -y buildozer python-for-android
+        pip install --upgrade pip
+        pip install git+https://github.com/kivy/buildozer.git
+    
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
 
@@ -50,7 +51,7 @@ jobs:
 
     - name: Reset Buildozer SDK cache
       run: |
-        rm -rf ~/.buildozer/android
+        rm -rf ~/.buildozer
 
     - name: Build APK
       run: |
