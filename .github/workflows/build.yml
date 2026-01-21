@@ -26,18 +26,17 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
 
-    - name: Install Android Build Tools (FINAL FIX)
+    - name: Install Android Build Tools (manual)
       run: |
-        export ANDROID_SDK_ROOT=$ANDROID_HOME
-        export PATH=$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH
-        yes | sdkmanager --licenses
         sdkmanager "platform-tools"
         sdkmanager "platforms;android-33"
         sdkmanager "build-tools;33.0.2"
+        ls $ANDROID_HOME/build-tools
 
     - name: Fix Buildozer SDK path
       run: |
         echo "ANDROIDSDK=$ANDROID_HOME" >> $GITHUB_ENV
+        echo "ANDROIDNDK=$ANDROID_HOME/ndk/25.1.8937393" >> $GITHUB_ENV
 
     - name: Build APK
       run: |
