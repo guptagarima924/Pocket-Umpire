@@ -117,7 +117,8 @@ android.ndk = 25b
 # (int) Android NDK API to use. This is the minimum API your app will support, it should usually match android.minapi.
 android.ndk_api = 21
 
-p4a.branch = master
+p4a.branch = develop
+p4a.source_dir = ~/.buildozer/android/platform/python-for-android
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
 
