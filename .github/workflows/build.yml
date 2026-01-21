@@ -26,13 +26,11 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v3
 
-    - name: Install Build Tools
+    - name: Install Android Build Tools (FIX)
       run: |
-        sdkmanager "build-tools;33.0.2" "platforms;android-33"
-
-    - name: Install Android Build Tools
-      run: |
-        yes | sdkmanager "build-tools;33.0.2" "platforms;android-33"
+        sdkmanager "platform-tools"
+        sdkmanager "platforms;android-33"
+        sdkmanager "build-tools;33.0.2"
 
     - name: Build APK
       run: |
