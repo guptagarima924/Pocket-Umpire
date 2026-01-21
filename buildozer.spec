@@ -104,7 +104,7 @@ android.permissions = INTERNET,CAMERA
 
 # (int) Target Android API, should be as high as possible.
 android.api = 33
-android.sdk = 33
+android.sdk = /usr/local/lib/android/sdk
 android.build_tools_version = 33.0.2
 
 # (int) Minimum API your APK / AAB will support.
