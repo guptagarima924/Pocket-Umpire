@@ -44,6 +44,10 @@ jobs:
         echo "ANDROID_SDK_ROOT=/usr/local/lib/android/sdk" >> $GITHUB_ENV
         echo "/usr/local/lib/android/sdk/platform-tools" >> $GITHUB_PATH
 
+    - name: Reset Buildozer SDK cache
+      run: |
+        rm -rf ~/.buildozer/android
+
     - name: Build APK
       run: |
         buildozer android debug
