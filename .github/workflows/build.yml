@@ -35,6 +35,10 @@ jobs:
         sdkmanager "platforms;android-33"
         sdkmanager "build-tools;33.0.2"
 
+    - name: Fix Buildozer SDK path
+      run: |
+        echo "ANDROIDSDK=$ANDROID_HOME" >> $GITHUB_ENV
+
     - name: Build APK
       run: |
         buildozer android debug
