@@ -17,9 +17,11 @@ jobs:
         sudo apt install -y python3-pip git zip unzip openjdk-17-jdk
         pip install buildozer cython
 
-    - name: Install Android build tools
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v3
+
+    - name: Install Build Tools
       run: |
-        yes | sdkmanager --licenses
         sdkmanager "build-tools;33.0.2" "platforms;android-33"
 
     - name: Build APK
