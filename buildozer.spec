@@ -39,8 +39,6 @@ version = 0.1
 # comma separated e.g. requirements = sqlite3,kivy
 requirements = python3,kivy,pyjnius
 android.skip_update = True
-android.sdk = /usr/local/lib/android/sdk
-android.ndk = /usr/local/lib/android/sdk/ndk/25.1.8937393
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
