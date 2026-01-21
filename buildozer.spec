@@ -118,6 +118,7 @@ android.ndk = 25b
 android.ndk_api = 21
 
 p4a.branch = develop
+p4a.url = https://github.com/kivy/python-for-android.git
 # (bool) Use --private data storage (True) or --dir public storage (False)
 #android.private_storage = True
 
