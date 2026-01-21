@@ -39,6 +39,8 @@ version = 0.1
 # comma separated e.g. requirements = sqlite3,kivy
 requirements = python3,kivy,pyjnius
 android.skip_update = True
+android.sdk = /usr/local/lib/android/sdk
+android.ndk = /usr/local/lib/android/sdk/ndk/25.1.8937393
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -105,7 +107,7 @@ android.permissions = INTERNET,CAMERA
 # (int) Target Android API, should be as high as possible.
 android.api = 33
 android.sdk = 33
-android.build_tools = 33.0.2
+android.build_tools_version = 33.0.2
 
 # (int) Minimum API your APK / AAB will support.
 android.minapi = 21
